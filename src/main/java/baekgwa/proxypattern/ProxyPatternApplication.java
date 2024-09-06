@@ -2,6 +2,7 @@ package baekgwa.proxypattern;
 
 import baekgwa.proxypattern.gloabl.config.ApplicationConfig;
 import baekgwa.proxypattern.gloabl.config.v1_proxy.InterfaceProxyConfig;
+import baekgwa.proxypattern.gloabl.config.v2_proxyfactory.ProxyFactoryConfig;
 import baekgwa.proxypattern.gloabl.logger.Logger;
 import baekgwa.proxypattern.gloabl.logger.LoggerImpl;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +13,8 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootApplication(scanBasePackages = "baekgwa.proxypattern.web")
 //@Import(ApplicationConfig.class)
-@Import(InterfaceProxyConfig.class)
+//@Import(InterfaceProxyConfig.class)
+@Import(ProxyFactoryConfig.class)
 public class ProxyPatternApplication {
 
     public static void main(String[] args) {
